@@ -9,27 +9,16 @@ public class Task2 {
     first() - возвращает первый элемент из очереди, не удаляя.
      */
     public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<>();
-        enqueue(queue, "1");
-        enqueue(queue, "2");
-        enqueue(queue, "3");
-        enqueue(queue, "4");
-        dequeue(queue);
-        System.out.println(fiest(queue));
+        MyCl myCl = new MyCl();
+        myCl.enqueue("1");
+        myCl.enqueue("2");
+        myCl.enqueue("3");
+        myCl.enqueue("4");
+        System.out.println(myCl.queue);
+        myCl.dequeue();
+        System.out.println(myCl.queue);
+        System.out.println(myCl.fiest());
+        System.out.println(myCl.queue);
     }
 
-    static String fiest (Queue<String> queue) {
-        String text = queue.element();
-        return text;
-    }
-
-    static void dequeue(Queue<String> queue) {
-        queue.remove();
-        System.out.println(queue);
-    }
-
-    static void enqueue(Queue<String> queue, String text) {
-        queue.add(text);
-        System.out.println(queue);
-    }
 }
